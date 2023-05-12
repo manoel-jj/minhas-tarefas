@@ -57,19 +57,17 @@ const ListaDeTarefas = () => {
     <MainContainer>
       <Titulo as="p">{mensagem}</Titulo>
       <ul>
-        <li>
-          {tarefas.map((t) => (
-            <li key={t.titulo}>
-              <Tarefa
-                id={t.id}
-                descricao={t.descricao}
-                titulo={t.titulo}
-                status={t.status}
-                prioridade={t.prioridade}
-              />
-            </li>
-          ))}
-        </li>
+        {tarefas.map((t) => (
+          <li key={t.titulo}>
+            <Tarefa
+              id={t.id}
+              descricao={t.descricao}
+              titulo={t.titulo}
+              status={t.status}
+              prioridade={t.prioridade}
+            />
+          </li>
+        ))}
       </ul>
     </MainContainer>
   )

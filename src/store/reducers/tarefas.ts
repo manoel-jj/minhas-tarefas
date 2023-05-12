@@ -1,4 +1,4 @@
-import { createSlice, isAction, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Tarefa from '../../models/Tarefa'
 import * as enums from '../../components/utils/enums/Tarefa'
 
@@ -7,29 +7,7 @@ type TarefasState = {
 }
 
 const initialState: TarefasState = {
-  itens: [
-    {
-      id: 1,
-      descricao: 'estudar7',
-      prioridade: enums.Prioridade.NORMAL,
-      status: enums.Status.CONCLUIDA,
-      titulo: 'estudar'
-    },
-    {
-      id: 2,
-      descricao: 'es mod 7',
-      prioridade: enums.Prioridade.NORMAL,
-      status: enums.Status.CONCLUIDA,
-      titulo: 'trnasa'
-    },
-    {
-      id: 3,
-      descricao: 'estuda',
-      prioridade: enums.Prioridade.NORMAL,
-      status: enums.Status.CONCLUIDA,
-      titulo: 'comer'
-    }
-  ]
+  itens: []
 }
 
 const tarefasSlice = createSlice({
